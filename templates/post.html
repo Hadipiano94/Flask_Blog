@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/styles.css">
+</head>
+<body>
+    <a href="{{ url_for('get_home') }}">HomePage</a> \ <a href="{{ url_for('get_blog') }}">Blog</a>
+    <h1>{{ the_post.title }}</h1>
+    <h3>{{ the_post.body }}</h3>
+    <h6>@CopyRight {{ year }}, Hadi Yousefi</h6>
+</body>
+</html>

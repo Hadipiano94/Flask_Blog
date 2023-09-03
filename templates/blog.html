@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <a href="{{ url_for('get_home') }}">HomePage</a>
+    <h1>This are my Blogs!</h1>
+    {% for post in all_posts: %}
+        <div class="wrapper">
+            <h1>{{ post.title }}</h1>
+            <h3>{{ post.subtitle }}</h3>
+            <a href="{{ url_for('get_post', my_id=post.id) }}">Read</a>
+        </div>
+    {% endfor %}
+    <h6>@CopyRight {{ year }}, Hadi Yousefi</h6>
+</body>
+</html>
